@@ -1,15 +1,21 @@
 
 body {
-    background-color: black;
+    background-color: rgb(18, 18, 18);
     color: white;
     font-family: 'Raleway', sans-serif;
+    height: 1000px;
     margin: 0px;
 }
 
 .top-bar {
-    margin-top: 10px;
+    background-color: rgba(18, 18, 18, 0.97);
     display: flex;
-    height: 50px;
+    height: 55px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 100;
 }
 
 .my-name {
@@ -38,20 +44,12 @@ body {
     width: 123px;
 }
 
-hr {
-    background-color: rgb(51, 51, 51);
-    border: 0;
-    height: 1px;
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
 button {
-    background-color: rgb(0, 0, 0);
+    background-color: transparent;
     border: none;
     color: white;
     font-family: 'Raleway', sans-serif;
-    font-weight: 100;
+    font-weight: 400;
     height: 25px;
     transition: background-color 0.15s;
     width: 100px;
@@ -66,7 +64,22 @@ button:active {
     opacity: 0.8;
 }
 
+hr {
+    background-color: rgb(51, 51, 51);
+    border: 0;
+    height: 1px;
+    position: fixed;
+    margin-top: 0px;
+    top: 55px;
+    left: 15px;
+    right: 15px;
+    z-index: 100;
+}
+
 .home-page-content {
     margin-left: 15px;
     margin-right: 15px;
+    margin-bottom: 100px;
+    position: absolute;
+    top: 50px;
 }
