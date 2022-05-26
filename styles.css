@@ -29,6 +29,12 @@ body {
     width: 80%;
 }
 
+.my-name-link, .my-name-link:visited, .my-name-link:hover, .my-name-link:active{
+    color: white;
+    text-decoration: none;
+
+}
+
 .menu-bar {
     display: flex;
     flex-direction: row;
