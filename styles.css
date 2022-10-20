@@ -1,14 +1,14 @@
 
 body {
     background-color: rgb(18, 18, 18);
-    color: white;
+    color: blueviolet;
     font-family: 'Raleway', sans-serif;
     height: 1000px;
     margin: 0px;
 }
 
 .top-bar {
-    background-color: rgba(18, 18, 18, 0.97);
+    background-color: rgb(18, 18, 18);
     display: flex;
     height: 55px;
     position: fixed;
@@ -30,7 +30,7 @@ body {
 }
 
 .my-name-link, .my-name-link:visited, .my-name-link:hover, .my-name-link:active{
-    color: white;
+    color: blueviolet;
     text-decoration: none;
 
 }
@@ -63,10 +63,12 @@ button {
 
 button:hover {
     cursor: pointer;
+    color: white;
     text-decoration: underline;
 }
 
 button:active {
+    color: white;
     opacity: 0.8;
 }
 
