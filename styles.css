@@ -9,8 +9,8 @@ body {
 }
 
 .navbar {
-    background-color: rgba(187, 33, 33, 0.7);
-    /* background-color: rgba(18, 18, 18, 0.7); */
+    /* background-color: rgba(187, 33, 33, 0.7); */
+    background-color: rgba(18, 18, 18, 0.7);
     display: flex;
     height: 55px;
     position: fixed;
@@ -21,8 +21,8 @@ body {
 }
 
 .name-link-container {
-    background-color: rgba(35, 188, 24, 0.7);
     align-items: end;
+    /* background-color: rgba(35, 188, 24, 0.7); */
     display: flex;
     font-size: 32px;
     font-weight: 700;
@@ -33,7 +33,7 @@ body {
 }
 
 .name-link, .name-link:visited, .name-link:hover, .name-link:active{
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
@@ -43,23 +43,31 @@ body {
     margin-right: 15px;
 }
 
-.about {
-    background-color: rgba(33, 187, 169, 0.7);
+#about {
+    /* background-color: rgba(33, 187, 169, 0.7); */
 }
-.projects {
-    background-color: rgba(33, 92, 187, 0.7);
+#projects {
+    /* background-color: rgba(33, 92, 187, 0.7); */
 }
-.music {
-    background-color: rgba(187, 33, 123, 0.7);
+#music {
+    /* background-color: rgba(187, 33, 123, 0.7); */
 }
 
-.about, .projects, .music {
-    align-items: flex-end;
+.menu-bar-links {
+    align-items: center;
+    color:rgb(255, 255, 255);
     display: flex;
     flex: 1;
+    font-size: 20px;
+    font-weight: 700;
     justify-content: center;
     min-width: 120px; 
+    text-decoration: none;
     width: 123px;
+}
+
+.menu-bar-links:hover {
+    text-decoration: underline;
 }
 
 /* button {
@@ -93,6 +101,16 @@ button:active {
     font-weight: 400;
     position: absolute;
     top: 50px;
+}
+
+.description {
+    margin-left: 100px;
+    margin-top: 100px;
+    margin-right: 800px;
+}
+
+.regular-link {
+    color:rgb(82, 126, 195);
 }
 
 h1 {
