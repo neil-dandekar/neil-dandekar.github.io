@@ -1,58 +1,118 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 50px;
-    background-color: #FFC0CB; /* Soft pink background */
-}
-
-#questionnaire button {
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    transition: transform 0.2s; /* Smooth scaling on hover */
-}
-
-#questionnaire button:hover {
-    transform: scale(1.1); /* Slightly enlarge buttons on hover */
-}
-
-#yesBtn {
+    background-color: rgb(32, 32, 32);
     color: white;
-    background-color: #ff4d4d;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Raleway', sans-serif;
+    height: 1000px;
+    margin: 0px;
 }
 
-#noBtn {
-    color: white;
-    background-color: #0099cc;
+.navbar {
+    /* background-color: rgba(187, 33, 33, 0.7); */
+    background-color: rgba(18, 18, 18, 0.7);
+    display: flex;
+    height: 55px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 100;
 }
 
-@keyframes pop {
-    from {
-        transform: scale(0);
-    }
-    to {
-        transform: scale(1);
-    }
-}
-
-.heart {
-    animation: pop 0.5s ease;
+.name-link-container {
+    align-items: end;
+    /* background-color: rgba(35, 188, 24, 0.7); */
+    display: flex;
     font-size: 32px;
+    font-weight: 700;
+    margin-left: 15px;
+    margin-top: 15px;
+    min-width: 300px;
+    width: 80%;
+}
+
+.name-link, .name-link:visited, .name-link:hover, .name-link:active{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.menu-bar {
+    display: flex;
+    flex-direction: row;
+    margin-right: 15px;
+}
+
+#about {
+    /* background-color: rgba(33, 187, 169, 0.7); */
+}
+#projects {
+    /* background-color: rgba(33, 92, 187, 0.7); */
+}
+#music {
+    /* background-color: rgba(187, 33, 123, 0.7); */
+}
+
+.menu-bar-links {
+    align-items: center;
+    color:rgb(255, 255, 255);
+    display: flex;
+    flex: 1;
+    font-size: 20px;
+    font-weight: 700;
+    justify-content: center;
+    min-width: 120px; 
+    text-decoration: none;
+    width: 123px;
+}
+
+.menu-bar-links:hover {
+    text-decoration: underline;
+}
+
+/* button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    height: 100%;
+    transition: background-color 0.15s;
+    width: 100px;
+}
+
+button:hover {
+    background-color: black;
+    cursor: pointer;
+    color: white;
+    text-decoration: underline;
+}
+
+button:active {
+    color: white;
+    opacity: 0.8;
+} */
+
+.home-page-content {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 100px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
     position: absolute;
+    top: 50px;
 }
 
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
+.description {
+    margin-left: 100px;
+    margin-top: 100px;
+    margin-right: 800px;
 }
 
-.heart.fade-out {
-    animation: fadeOut 3s forwards; /* Use forwards to keep the element in the final state */
+.regular-link {
+    color:rgb(82, 126, 195);
+}
+
+h1 {
+    margin-top: 50px;
 }
