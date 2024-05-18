@@ -1,118 +1,223 @@
+#landing-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#landing-page h1 {
+  margin: 0;
+  font-size: 4em;
+}
+#landing-page p {
+  margin: 10px 0;
+  font-size: 1.5em;
+}
+#landing-page .quick-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+#landing-page .quick-links a {
+  text-decoration: none;
+}
+#landing-page .quick-links img {
+  width: 40px;
+  height: 40px;
+}
+
+header {
+  display: none;
+  background-color: rgb(26, 26, 26);
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  opacity: 0;
+  animation: fadeIn 2s forwards 3s;
+}
+header .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+header nav {
+  display: flex;
+  gap: 15px;
+}
+header nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+header nav a:hover {
+  color: rgb(255, 76, 76);
+}
+
+@keyframes fadeIn {
+  to {
+    display: flex;
+    opacity: 1;
+  }
+}
+#experience {
+  background-color: rgb(32, 32, 32);
+  padding: 40px 20px;
+}
+#experience .card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+#experience .card {
+  background-color: rgb(58, 58, 58);
+  padding: 20px;
+  border-radius: 20px;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  border: 2px solid transparent;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+#experience .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-color: rgb(255, 76, 76);
+}
+#experience .card h3 {
+  margin-top: 0;
+  color: rgb(255, 76, 76);
+}
+#experience .card p {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
 body {
-    background-color: rgb(32, 32, 32);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Raleway', sans-serif;
-    height: 1000px;
-    margin: 0px;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  background-color: rgb(32, 32, 32);
+  color: rgb(255, 255, 255);
 }
 
-.navbar {
-    /* background-color: rgba(187, 33, 33, 0.7); */
-    background-color: rgba(18, 18, 18, 0.7);
-    display: flex;
-    height: 55px;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    z-index: 100;
+header {
+  background-color: rgb(26, 26, 26);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.name-link-container {
-    align-items: end;
-    /* background-color: rgba(35, 188, 24, 0.7); */
-    display: flex;
-    font-size: 32px;
-    font-weight: 700;
-    margin-left: 15px;
-    margin-top: 15px;
-    min-width: 300px;
-    width: 80%;
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
 }
 
-.name-link, .name-link:visited, .name-link:hover, .name-link:active{
-    color: rgb(255, 255, 255);
-    text-decoration: none;
+nav {
+  display: flex;
+  gap: 15px;
 }
 
-.menu-bar {
-    display: flex;
-    flex-direction: row;
-    margin-right: 15px;
+nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: rgb(255, 76, 76);
+}
+
+section {
+  padding: 20px;
 }
 
 #about {
-    /* background-color: rgba(33, 187, 169, 0.7); */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-#projects {
-    /* background-color: rgba(33, 92, 187, 0.7); */
-}
-#music {
-    /* background-color: rgba(187, 33, 123, 0.7); */
-}
-
-.menu-bar-links {
-    align-items: center;
-    color:rgb(255, 255, 255);
-    display: flex;
-    flex: 1;
-    font-size: 20px;
-    font-weight: 700;
-    justify-content: center;
-    min-width: 120px; 
-    text-decoration: none;
-    width: 123px;
+#about p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  max-width: 800px;
 }
 
-.menu-bar-links:hover {
-    text-decoration: underline;
+h2 {
+  color: rgb(255, 76, 76);
+  border-bottom: 2px solid rgb(255, 76, 76);
+  padding-bottom: 10px;
 }
 
-/* button {
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
-    height: 100%;
-    transition: background-color 0.15s;
-    width: 100px;
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 }
 
-button:hover {
-    background-color: black;
-    cursor: pointer;
-    color: white;
-    text-decoration: underline;
+.card {
+  background-color: rgb(58, 58, 58);
+  padding: 20px;
+  border-radius: 20px;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  border: 2px solid transparent;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-color: rgb(255, 76, 76);
+}
+.card h3 {
+  margin-top: 0;
+  color: rgb(255, 76, 76);
+}
+.card p {
+  font-size: 1em;
+  line-height: 1.6;
 }
 
-button:active {
-    color: white;
-    opacity: 0.8;
-} */
-
-.home-page-content {
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 100px;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
-    position: absolute;
-    top: 50px;
+.social-links {
+  text-align: center;
+  margin: 20px 0;
+}
+.social-links a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1.5em;
+  transition: color 0.3s;
+}
+.social-links a:hover {
+  color: rgb(255, 76, 76);
 }
 
-.description {
-    margin-left: 100px;
-    margin-top: 100px;
-    margin-right: 800px;
+#experience {
+  padding: 40px 20px;
+  background-color: rgb(51, 51, 51);
+}
+#experience .experience-item {
+  margin-bottom: 20px;
+}
+#experience .experience-item h3 {
+  margin-top: 0;
+  color: rgb(255, 76, 76);
+}
+#experience .experience-item p {
+  font-size: 1em;
+  line-height: 1.6;
 }
 
-.regular-link {
-    color:rgb(82, 126, 195);
-}
-
-h1 {
-    margin-top: 50px;
-}
+/*# sourceMappingURL=styles.css.map */

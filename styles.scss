@@ -1,0 +1,255 @@
+// Define variables using RGB
+$primary-color: rgb(255, 76, 76);
+$background-color: rgb(32, 32, 32);
+$text-color: rgb(255, 255, 255);
+$header-background: rgb(26, 26, 26);
+$card-background: rgb(58, 58, 58);
+
+#landing-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+    font-size: 4em;
+  }
+
+  p {
+    margin: 10px 0;
+    font-size: 1.5em;
+  }
+
+  .quick-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+header {
+  display: none; // Initially hidden
+  background-color: $header-background;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; // Ensure the header stays above other content
+  opacity: 0;
+  animation: fadeIn 2s forwards 3s; // Fade in after 3 seconds
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+
+  nav {
+    display: flex;
+    gap: 15px;
+
+    a {
+      color: $text-color;
+      text-decoration: none;
+      font-size: 1.2em;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    display: flex;
+    opacity: 1;
+  }
+}
+
+#experience {
+  background-color: $background-color;
+  padding: 40px 20px;
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .card {
+    background-color: $card-background;
+    padding: 20px;
+    border-radius: 20px;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    border: 2px solid transparent;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      border-color: $primary-color;
+    }
+
+    h3 {
+      margin-top: 0;
+      color: $primary-color;
+    }
+
+    p {
+      font-size: 1em;
+      line-height: 1.6;
+    }
+  }
+}
+
+// Use variables in your styles
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+header {
+  background-color: $header-background;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  color: $text-color;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+section {
+  padding: 20px;
+}
+
+#about {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 800px;
+  }
+}
+
+h2 {
+  color: $primary-color;
+  border-bottom: 2px solid $primary-color;
+  padding-bottom: 10px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: $card-background;
+  padding: 20px;
+  border-radius: 20px;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  border: 2px solid transparent;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-color: $primary-color;
+  }
+
+  h3 {
+    margin-top: 0;
+    color: $primary-color;
+  }
+
+  p {
+    font-size: 1em;
+    line-height: 1.6;
+  }
+}
+
+.social-links {
+  text-align: center;
+  margin: 20px 0;
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+#experience {
+  padding: 40px 20px;
+  background-color: rgb(51, 51, 51);
+
+  .experience-item {
+    margin-bottom: 20px;
+
+    h3 {
+      margin-top: 0;
+      color: $primary-color;
+    }
+
+    p {
+      font-size: 1em;
+      line-height: 1.6;
+    }
+  }
+}
