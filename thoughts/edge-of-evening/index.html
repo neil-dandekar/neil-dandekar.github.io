@@ -5,18 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Neil Dandekar</title>
         <meta name="description" content="Notebook entry by Neil Dandekar." />
-        <script>
-            (() => {
-                try {
-                    const stored = localStorage.getItem("nd-theme");
-                    const theme = stored || "dark";
-                    document.documentElement.setAttribute("data-theme", theme);
-                    document.documentElement.style.colorScheme = theme;
-                } catch {
-                    // no-op
-                }
-            })();
-        </script>
+        <script src="/theme-core.js"></script>
         <script>
             (() => {
                 const slug = new URLSearchParams(window.location.search).get("slug");

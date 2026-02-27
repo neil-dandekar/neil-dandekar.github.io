@@ -8,18 +8,7 @@
             name="description"
             content="Public personal notebook by Neil Dandekar."
         />
-        <script>
-            (() => {
-                try {
-                    const stored = localStorage.getItem("nd-theme");
-                    const theme = stored || "dark";
-                    document.documentElement.setAttribute("data-theme", theme);
-                    document.documentElement.style.colorScheme = theme;
-                } catch {
-                    // no-op
-                }
-            })();
-        </script>
+        <script src="/theme-core.js"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"
             defer

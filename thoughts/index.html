@@ -5,18 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Thoughts - Neil Dandekar</title>
         <meta name="description" content="Thought archive by Neil Dandekar." />
-        <script>
-            (() => {
-                try {
-                    const stored = localStorage.getItem("nd-theme");
-                    const theme = stored || "dark";
-                    document.documentElement.setAttribute("data-theme", theme);
-                    document.documentElement.style.colorScheme = theme;
-                } catch {
-                    // no-op
-                }
-            })();
-        </script>
+        <script src="/theme-core.js"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"
             defer
