@@ -9,6 +9,15 @@ Keep the repository organized by ownership and runtime role:
 - `public/`: Static assets served directly (images, icons, downloadable files, static manifests).
 - `codex/`: Engineering process artifacts (specs, implementation notes, migration docs, and feature summaries).
 
+### Runtime Boundary (React-Only)
+
+- Active runtime code lives in `app/src/` and build/deploy config in `app/`.
+- Do **not** reintroduce legacy runtime directories:
+  - `app/core/`
+  - `app/legacy/`
+  - `app/pages/`
+- Do **not** reintroduce deprecated root runtime files (`content.js`, `site.js`, `layout.js`, `theme.js`, etc.).
+
 ### Placement Requirements
 
 - Do **not** add feature implementation files at repository root.
@@ -56,5 +65,6 @@ Keep the repository organized by ownership and runtime role:
 
 - [ ] No root bloat introduced (new files are placed in appropriate subdirectories).
 - [ ] No duplicate layout shells were introduced; shared layout remains single-source.
+- [ ] No deprecated runtime paths/files were reintroduced (`app/core`, `app/legacy`, `app/pages`, root legacy JS/CSS runtime files).
 - [ ] Feature summary exists in `codex/feature-summaries/` and is complete.
 - [ ] Any tradeoffs and follow-ups are documented.
