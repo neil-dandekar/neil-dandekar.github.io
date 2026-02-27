@@ -35,7 +35,7 @@
 ## 2026-02-27 - Branch 3
 
 - Branch: `feature/liquid-glass-shell-complete`
-- PR: Pending
+- PR: [#7](https://github.com/neil-dandekar/neil-dandekar.github.io/pull/7)
 - Scope delivered:
   - Fixed `liquid-glass-react` import/type usage (default export path).
   - Added explicit theme-aware glass presets for container and social variants.
