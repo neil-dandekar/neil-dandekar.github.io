@@ -210,7 +210,7 @@ body[data-page="entry"] .site-nav-link[data-node="thoughts"] {
   pointer-events: none;
 }
 
-body[data-page="home"] .site-shell {
+.site-shell.with-home-bg {
   position: relative;
   z-index: 1;
 }

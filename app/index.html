@@ -6,6 +6,22 @@
     <title>Neil Dandekar</title>
     <script>
       (() => {
+        const DARK = 'dark';
+        const LIGHT = 'light';
+        try {
+          const stored = localStorage.getItem('nd-theme');
+          const system = window.matchMedia('(prefers-color-scheme: dark)').matches ? DARK : LIGHT;
+          const nextTheme = stored === LIGHT || stored === DARK ? stored : system;
+          document.documentElement.setAttribute('data-theme', nextTheme);
+          document.documentElement.style.colorScheme = nextTheme;
+        } catch {
+          document.documentElement.setAttribute('data-theme', DARK);
+          document.documentElement.style.colorScheme = DARK;
+        }
+      })();
+    </script>
+    <script>
+      (() => {
         const params = new URLSearchParams(window.location.search);
         const fallbackPath = params.get('p');
         if (!fallbackPath) return;
