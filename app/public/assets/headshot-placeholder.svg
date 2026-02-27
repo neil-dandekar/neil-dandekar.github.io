@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="800" viewBox="0 0 640 800" fill="none">
+  <rect width="640" height="800" fill="#201c18"/>
+  <rect x="32" y="32" width="576" height="736" rx="16" fill="#2a2520" stroke="#3f3830"/>
+  <circle cx="320" cy="285" r="112" fill="#4b4338"/>
+  <path d="M160 620c24-98 86-152 160-152s136 54 160 152" fill="#3f3830"/>
+  <text x="320" y="718" text-anchor="middle" fill="#b8ab96" font-family="Arial, sans-serif" font-size="26">Headshot Placeholder</text>
+</svg>

@@ -4,64 +4,10 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Thoughts - Neil Dandekar</title>
-        <meta name="description" content="Thought archive by Neil Dandekar." />
-        <script>
-            (() => {
-                try {
-                    const stored = localStorage.getItem("nd-theme");
-                    const theme = stored || "dark";
-                    document.documentElement.setAttribute("data-theme", theme);
-                    document.documentElement.style.colorScheme = theme;
-                } catch {
-                    // no-op
-                }
-            })();
-        </script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"
-            defer
-        ></script>
-        <link rel="stylesheet" href="/styles.css?v=20260227l" />
+        <meta http-equiv="refresh" content="0; url=/app/pages/thoughts/" />
+        <link rel="canonical" href="/app/pages/thoughts/" />
     </head>
-    <body data-page="thoughts">
-        <div data-layout-content>
-            <section class="finder-main" aria-label="Thoughts folder view">
-                <div class="finder-toolbar" id="listControls" hidden>
-                    <p class="section-label finder-heading" id="thoughtsHeading">
-                        Thoughts
-                    </p>
-                    <div class="finder-tools">
-                        <label class="sort-wrap" for="tagSelect">
-                            <span>Tag</span>
-                            <select id="tagSelect"></select>
-                        </label>
-                        <label class="sort-wrap" for="sortSelect">
-                            <span id="sortLabel">Sort</span>
-                            <select id="sortSelect">
-                                <option value="modified-desc" id="sortNewestLabel">
-                                    Newest first
-                                </option>
-                                <option value="modified-asc" id="sortOldestLabel">
-                                    Oldest first
-                                </option>
-                                <option value="tag-asc">Tag (A-Z)</option>
-                                <option value="tag-desc">Tag (Z-A)</option>
-                            </select>
-                        </label>
-                    </div>
-                </div>
-                <div class="finder-column-head" aria-hidden="true">
-                    <span>Name</span>
-                    <span>Tag</span>
-                    <span>Modified</span>
-                </div>
-                <ul class="finder-list entry-list" id="entryList"></ul>
-            </section>
-        </div>
-
-        <script src="/theme.js" defer></script>
-        <script src="/layout.js" defer></script>
-        <script src="/content.js" defer></script>
-        <script src="/site.js" defer></script>
+    <body>
+        <p>Redirecting to <a href="/app/pages/thoughts/">/app/pages/thoughts/</a>...</p>
     </body>
 </html>
