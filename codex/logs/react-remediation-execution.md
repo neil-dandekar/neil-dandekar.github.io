@@ -31,3 +31,19 @@
 - Risks / follow-ups:
   - Startup now preloads all entry HTML; watch payload size as entries grow.
   - Liquid Glass export warning remains and is addressed in Branch 3.
+
+## 2026-02-27 - Branch 3
+
+- Branch: `feature/liquid-glass-shell-complete`
+- PR: [#7](https://github.com/neil-dandekar/neil-dandekar.github.io/pull/7)
+- Scope delivered:
+  - Fixed `liquid-glass-react` import/type usage (default export path).
+  - Added explicit theme-aware glass presets for container and social variants.
+  - Applied glass wrappers to topbar/sidebar/footer and darker glass wrappers to social buttons.
+  - Added fallback glass styling classes for partial browser support.
+  - Stabilized local TS ambient-type resolution for repeatable build checks.
+- Validation evidence:
+  - `npm run build --prefix app` passed.
+  - LiquidGlass named export warning no longer appears.
+- Risks / follow-ups:
+  - Needs visual QA in Safari/Firefox for reduced displacement behavior.
