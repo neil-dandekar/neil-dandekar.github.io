@@ -33,4 +33,4 @@ flowchart LR
 
 ## Visual scratch
 
-![Hand sketch of a notebook flow](/public/assets/notebook-sketch.svg)
+![Hand sketch of a notebook flow](/assets/notebook-sketch.svg)
