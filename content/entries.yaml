@@ -1,0 +1,25 @@
+entries:
+    - slug: "quiet-notes-on-attention"
+      path: "./content/quiet-notes-on-attention.md"
+      title: "Quiet Notes on Attention"
+      date: "2026-02-24"
+      kind: "Personal note"
+      featured: true
+    - slug: "small-systems-stable-habits"
+      path: "./content/small-systems-stable-habits.md"
+      title: "Small Systems, Stable Habits"
+      date: "2026-02-16"
+      kind: "Technical note"
+      featured: true
+    - slug: "edge-of-evening"
+      path: "./content/edge-of-evening.md"
+      title: "At the Edge of Evening"
+      date: "2026-02-02"
+      kind: "Creative writing"
+      featured: true
+    - slug: "paper-notes-drafts"
+      path: "./content/paper-notes-drafts.md"
+      title: "Draft Notes for a Paper"
+      date: "2026-01-22"
+      kind: "Research draft"
+      featured: false
