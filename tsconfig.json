@@ -10,8 +10,7 @@
         "skipLibCheck": true
     },
     "include": [
-        "*.js",
-        "content.js"
+        "app/**/*.js"
     ],
     "exclude": [
         "node_modules"

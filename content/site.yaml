@@ -24,7 +24,7 @@ home:
           location: "Mountain View, CA"
           summary: "Incoming Summer 2026!"
           logo:
-              src: "/assets/experience/databricks.png"
+              src: "/public/assets/experience/databricks.png"
               alt: "Databricks logo"
         - role: "Software Engineering Intern"
           company: "Google"
@@ -32,7 +32,7 @@ home:
           location: "Sunnyvale, CA"
           summary: "I'll be optimizing the scheduler for BorgGoogle's Technical Infrastructure soon, where I'll be optimizing the scheduler for Borg. If you're familiar with Kubernetes, Borg is its predecessor and Google's propietary container orchestration service."
           logo:
-              src: "/assets/experience/google.png"
+              src: "/public/assets/experience/google.png"
               alt: "Google logo"
         - role: "Software Development Engineer Intern"
           company: "Amazon"
@@ -40,7 +40,7 @@ home:
           location: "Bellevue, WA"
           summary: "I owned, developed, and deployed an agentic platform to automate chaos engineering for Amazon Fulfillment Technology. I had a lot of fun experimenting with multi-agent orchestration and Model Context Protocol."
           logo:
-              src: "/assets/experience/amazon.png"
+              src: "/public/assets/experience/amazon.png"
               alt: "Amazon logo"
         - role: "Machine Learning Engineer Intern"
           company: "Berkeley Lab"
@@ -48,7 +48,7 @@ home:
           location: "Berkeley, CA"
           summary: "I worked on ."
           logo:
-              src: "/assets/experience/lbnl.png"
+              src: "/public/assets/experience/lbnl.png"
               alt: "Berkeley Lab logo"
         - role: "Software Engineer Intern"
           company: "Berkeley Lab"
@@ -56,7 +56,7 @@ home:
           location: "Berkeley, CA"
           summary: "Worked on various fullstack features for a new portal"
           logo:
-              src: "/assets/experience/lbnl.png"
+              src: "/public/assets/experience/lbnl.png"
               alt: "Berkeley Lab logo"
 
 thoughts:
