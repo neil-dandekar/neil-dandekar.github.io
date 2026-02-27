@@ -51,7 +51,7 @@
 ## 2026-02-27 - Branch 4
 
 - Branch: `chore/remove-legacy-runtime`
-- PR: Pending
+- PR: [#8](https://github.com/neil-dandekar/neil-dandekar.github.io/pull/8)
 - Scope delivered:
   - Removed deprecated legacy runtime directories (`app/core`, `app/legacy`, `app/pages`).
   - Removed deprecated root runtime JS/CSS and old thoughts HTML runtime file.
