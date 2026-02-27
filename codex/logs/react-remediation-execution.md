@@ -3,7 +3,7 @@
 ## 2026-02-27 - Branch 1
 
 - Branch: `feature/pages-react-cutover`
-- PR: Pending
+- PR: [#5](https://github.com/neil-dandekar/neil-dandekar.github.io/pull/5)
 - Scope delivered:
   - Added deterministic app lockfile and dependency baseline updates.
   - Added GitHub Pages Actions deploy workflow for `app/dist`.
