@@ -24,161 +24,39 @@
         <link rel="stylesheet" href="/styles.css?v=20260227l" />
     </head>
     <body data-page="thoughts">
-        <div class="site-shell">
-            <section class="topbar" aria-label="Current path and quick links">
-                <p class="fs-path topbar-path" id="topbarPath"></p>
-                <div class="topbar-actions">
-                    <div class="topbar-socials">
-                        <a
-                            class="topbar-icon-btn"
-                            id="socialGithub"
-                            href="#"
-                            target="_blank"
-                            rel="noreferrer noopener"
-                            aria-label="GitHub"
-                        >
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.21.68-.48v-1.7c-2.77.6-3.35-1.17-3.35-1.17-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.54 1.03 1.54 1.03.9 1.53 2.35 1.09 2.92.83.09-.64.35-1.09.63-1.34-2.21-.25-4.53-1.1-4.53-4.91 0-1.09.39-1.98 1.02-2.67-.1-.25-.44-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.5 9.5 0 0 1 12 6.8c.85 0 1.71.11 2.51.32 1.91-1.29 2.74-1.02 2.74-1.02.55 1.37.21 2.39.11 2.64.64.69 1.02 1.58 1.02 2.67 0 3.82-2.32 4.66-4.54 4.9.36.31.67.92.67 1.86v2.84c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"
-                                />
-                            </svg>
-                        </a>
-                        <a
-                            class="topbar-icon-btn"
-                            id="socialLinkedin"
-                            href="#"
-                            target="_blank"
-                            rel="noreferrer noopener"
-                            aria-label="LinkedIn"
-                        >
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M6.94 8.5H3.56V20h3.38V8.5Zm.22-3.56A1.94 1.94 0 1 0 3.3 4.94a1.94 1.94 0 0 0 3.86 0ZM20.7 13.2c0-3.06-1.63-4.48-3.8-4.48-1.75 0-2.54.96-2.98 1.64V8.5h-3.38V20h3.38v-6.38c0-.34.03-.68.13-.93.27-.68.88-1.38 1.9-1.38 1.35 0 1.9 1.03 1.9 2.55V20h3.38v-6.8Z"
-                                />
-                            </svg>
-                        </a>
-                        <a
-                            class="topbar-icon-btn"
-                            id="socialInstagram"
-                            href="#"
-                            target="_blank"
-                            rel="noreferrer noopener"
-                            aria-label="Instagram"
-                        >
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <rect
-                                    x="3.5"
-                                    y="3.5"
-                                    width="17"
-                                    height="17"
-                                    rx="5"
-                                    ry="5"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="1.8"
-                                />
-                                <circle
-                                    cx="12"
-                                    cy="12"
-                                    r="4"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="1.8"
-                                />
-                                <circle cx="17.3" cy="6.8" r="1.2" />
-                            </svg>
-                        </a>
-                        <a
-                            class="topbar-icon-btn"
-                            id="socialX"
-                            href="#"
-                            target="_blank"
-                            rel="noreferrer noopener"
-                            aria-label="X"
-                        >
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M5.3 4h4.3l3.07 4.34L16.58 4h2.1l-5.08 5.78L19.3 20H15l-3.3-4.67L7.62 20h-2.1l5.15-5.87L5.3 4Z"
-                                />
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="topbar-utility">
-                        <button
-                            class="theme-toggle topbar-icon-btn"
-                            id="themeToggle"
-                            type="button"
-                            aria-label="Switch to dark theme"
-                            aria-pressed="false"
-                        >
-                            <span class="theme-icon theme-sun" aria-hidden="true">☀</span>
-                            <span class="theme-icon theme-moon" aria-hidden="true">☾</span>
-                        </button>
+        <div data-layout-content>
+            <section class="finder-main" aria-label="Thoughts folder view">
+                <div class="finder-toolbar" id="listControls" hidden>
+                    <p class="section-label finder-heading" id="thoughtsHeading">
+                        Thoughts
+                    </p>
+                    <div class="finder-tools">
+                        <label class="sort-wrap" for="tagSelect">
+                            <span>Tag</span>
+                            <select id="tagSelect"></select>
+                        </label>
+                        <label class="sort-wrap" for="sortSelect">
+                            <span id="sortLabel">Sort</span>
+                            <select id="sortSelect">
+                                <option value="modified-desc" id="sortNewestLabel">
+                                    Newest first
+                                </option>
+                                <option value="modified-asc" id="sortOldestLabel">
+                                    Oldest first
+                                </option>
+                                <option value="tag-asc">Tag (A-Z)</option>
+                                <option value="tag-desc">Tag (Z-A)</option>
+                            </select>
+                        </label>
                     </div>
                 </div>
+                <div class="finder-column-head" aria-hidden="true">
+                    <span>Name</span>
+                    <span>Tag</span>
+                    <span>Modified</span>
+                </div>
+                <ul class="finder-list entry-list" id="entryList"></ul>
             </section>
-
-            <aside class="site-sidebar" aria-label="Site navigation">
-                <p class="site-sidebar-label">Folders</p>
-                <a class="site-nav-link" data-node="home" href="/">home.md</a>
-                <a
-                    class="site-nav-link"
-                    data-node="experience"
-                    href="/experience/"
-                >
-                    experience.md
-                </a>
-                <a class="site-nav-link" data-node="thoughts" href="/thoughts/">
-                    thoughts/
-                </a>
-            </aside>
-
-            <main class="page">
-                <section class="finder-main" aria-label="Thoughts folder view">
-                    <div class="finder-toolbar" id="listControls" hidden>
-                        <p class="section-label finder-heading" id="thoughtsHeading">
-                            Thoughts
-                        </p>
-                        <div class="finder-tools">
-                            <label class="sort-wrap" for="tagSelect">
-                                <span>Tag</span>
-                                <select id="tagSelect"></select>
-                            </label>
-                            <label class="sort-wrap" for="sortSelect">
-                                <span id="sortLabel">Sort</span>
-                                <select id="sortSelect">
-                                    <option value="modified-desc" id="sortNewestLabel">
-                                        Newest first
-                                    </option>
-                                    <option value="modified-asc" id="sortOldestLabel">
-                                        Oldest first
-                                    </option>
-                                    <option value="tag-asc">Tag (A-Z)</option>
-                                    <option value="tag-desc">Tag (Z-A)</option>
-                                </select>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="finder-column-head" aria-hidden="true">
-                        <span>Name</span>
-                        <span>Tag</span>
-                        <span>Modified</span>
-                    </div>
-                    <ul class="finder-list entry-list" id="entryList"></ul>
-                </section>
-                <footer class="site-footer" aria-label="Footer">
-                    <p class="site-footer-credit" id="footerCredit">
-                        Built by Neil Dandekar.
-                    </p>
-                    <a
-                        class="site-footer-link"
-                        id="sourceCodeLink"
-                        href="#"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                    >Source code</a>
-                </footer>
-            </main>
         </div>
 
         <script src="/theme.js" defer></script>
