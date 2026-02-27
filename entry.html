@@ -1,12 +1,65 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; url=/app/pages/entry.html" />
-    <title>Redirecting…</title>
-    <link rel="canonical" href="/app/pages/entry.html" />
-  </head>
-  <body>
-    <p>Redirecting to <a href="/app/pages/entry.html">/app/pages/entry.html</a>…</p>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Neil Dandekar</title>
+        <meta name="description" content="Notebook entry by Neil Dandekar." />
+        <script>
+            (() => {
+                try {
+                    const stored = localStorage.getItem("nd-theme");
+                    const theme = stored || "dark";
+                    document.documentElement.setAttribute("data-theme", theme);
+                    document.documentElement.style.colorScheme = theme;
+                } catch {
+                    // no-op
+                }
+            })();
+        </script>
+        <script>
+            (() => {
+                const slug = new URLSearchParams(window.location.search).get("slug");
+                if (!slug) return;
+                const roughTitle = slug
+                    .split("-")
+                    .filter(Boolean)
+                    .map((part) => part[0].toUpperCase() + part.slice(1))
+                    .join(" ");
+                if (roughTitle) {
+                    document.title = `${roughTitle} - Neil Dandekar`;
+                }
+            })();
+        </script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"
+            defer
+        ></script>
+        <link rel="stylesheet" href="/styles.css?v=20260227l" />
+    </head>
+    <body data-page="entry">
+        <div data-layout-content>
+            <article class="entry">
+                <h1 class="entry-title" id="entryTitle">Loading...</h1>
+                <p class="entry-meta" id="entryMeta"></p>
+                <div class="entry-content" id="entryContent"></div>
+            </article>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" defer></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+            defer
+        ></script>
+        <script src="/theme.js" defer></script>
+        <script src="/layout.js" defer></script>
+        <script src="/content.js" defer></script>
+        <script src="/entry.js" defer></script>
+    </body>
 </html>

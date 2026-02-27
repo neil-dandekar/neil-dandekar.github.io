@@ -1,12 +1,49 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; url=/app/pages/index.html" />
-    <title>Redirecting…</title>
-    <link rel="canonical" href="/app/pages/index.html" />
-  </head>
-  <body>
-    <p>Redirecting to <a href="/app/pages/index.html">/app/pages/index.html</a>…</p>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Neil Dandekar</title>
+        <meta
+            name="description"
+            content="Public personal notebook by Neil Dandekar."
+        />
+        <script>
+            (() => {
+                try {
+                    const stored = localStorage.getItem("nd-theme");
+                    const theme = stored || "dark";
+                    document.documentElement.setAttribute("data-theme", theme);
+                    document.documentElement.style.colorScheme = theme;
+                } catch {
+                    // no-op
+                }
+            })();
+        </script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"
+            defer
+        ></script>
+        <link rel="stylesheet" href="/styles.css?v=20260227l" />
+    </head>
+    <body data-page="home">
+        <div class="home-vanta-bg" id="homeVanta" aria-hidden="true"></div>
+
+        <div data-layout-content>
+            <section class="home-block intro-block">
+                <h1 class="intro-title" id="introTitle">Hi, I'm Neil.</h1>
+                <div class="intro-copy" id="introCopy"></div>
+            </section>
+
+            <section class="home-block experience-block">
+                <p class="section-label" id="experienceLabel">Experience</p>
+                <ul class="experience-list" id="experienceList"></ul>
+            </section>
+        </div>
+
+        <script src="/theme.js" defer></script>
+        <script src="/layout.js" defer></script>
+        <script src="/content.js" defer></script>
+        <script src="/home-vanta.js" defer></script>
+    </body>
 </html>

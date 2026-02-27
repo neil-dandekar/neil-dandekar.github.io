@@ -1,12 +1,38 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; url=/app/pages/experience/" />
-    <title>Redirecting…</title>
-    <link rel="canonical" href="/app/pages/experience/" />
-  </head>
-  <body>
-    <p>Redirecting to <a href="/app/pages/experience/">/app/pages/experience/</a>…</p>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Experience - Neil Dandekar</title>
+        <meta name="description" content="Experience by Neil Dandekar." />
+        <script>
+            (() => {
+                try {
+                    const stored = localStorage.getItem("nd-theme");
+                    const theme = stored || "dark";
+                    document.documentElement.setAttribute("data-theme", theme);
+                    document.documentElement.style.colorScheme = theme;
+                } catch {
+                    // no-op
+                }
+            })();
+        </script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"
+            defer
+        ></script>
+        <link rel="stylesheet" href="/styles.css?v=20260227l" />
+    </head>
+    <body data-page="experience">
+        <div data-layout-content>
+            <section class="home-block experience-block">
+                <p class="section-label" id="experienceLabel">Experience</p>
+                <ul class="experience-list" id="experienceList"></ul>
+            </section>
+        </div>
+
+        <script src="/theme.js" defer></script>
+        <script src="/layout.js" defer></script>
+        <script src="/content.js" defer></script>
+    </body>
 </html>
