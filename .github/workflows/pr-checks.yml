@@ -1,0 +1,70 @@
+name: PR Checks
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci --prefix app
+
+      - name: Build app
+        run: npm run build --prefix app
+
+  runtime-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Enforce React-only runtime structure
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          for legacy_dir in app/core app/legacy app/pages; do
+            if [[ -d "$legacy_dir" ]]; then
+              echo "Deprecated runtime directory exists: $legacy_dir"
+              exit 1
+            fi
+          done
+
+          legacy_files=(
+            content.js
+            entry.js
+            home-vanta.js
+            layout.js
+            site.js
+            styles.css
+            theme-core.js
+            theme.js
+            thoughts/index.html
+          )
+
+          for file in "${legacy_files[@]}"; do
+            if [[ -e "$file" ]]; then
+              echo "Deprecated legacy runtime file exists: $file"
+              exit 1
+            fi
+          done
+
+          topbar_count=$(git grep -n '<section className="topbar"' -- app/src | wc -l | tr -d '[:space:]')
+          if [[ "$topbar_count" != "1" ]]; then
+            echo "Expected exactly one topbar shell definition in app/src, got: $topbar_count"
+            exit 1
+          fi

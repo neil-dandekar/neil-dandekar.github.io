@@ -47,3 +47,19 @@
   - LiquidGlass named export warning no longer appears.
 - Risks / follow-ups:
   - Needs visual QA in Safari/Firefox for reduced displacement behavior.
+
+## 2026-02-27 - Branch 4
+
+- Branch: `chore/remove-legacy-runtime`
+- PR: [#8](https://github.com/neil-dandekar/neil-dandekar.github.io/pull/8)
+- Scope delivered:
+  - Removed deprecated legacy runtime directories (`app/core`, `app/legacy`, `app/pages`).
+  - Removed deprecated root runtime JS/CSS and old thoughts HTML runtime file.
+  - Updated repo docs to define React-only runtime boundaries.
+  - Added PR CI workflow with app build verification and runtime guard checks.
+- Validation evidence:
+  - `npm run build --prefix app` passed.
+  - Local runtime guard checks passed.
+- Risks / follow-ups:
+  - Rollback to legacy runtime requires git history instead of in-tree files.
+  - CI guard assumptions should be updated if architecture policy changes.
