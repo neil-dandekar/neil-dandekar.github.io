@@ -19,7 +19,7 @@
 ## 2026-02-27 - Branch 2
 
 - Branch: `feature/react-no-flicker-theme-content`
-- PR: Pending
+- PR: [#6](https://github.com/neil-dandekar/neil-dandekar.github.io/pull/6)
 - Scope delivered:
   - Bootstrapped site content, entry index, and entry HTML before first React render.
   - Replaced effect-driven async page content updates with synchronous context reads.
