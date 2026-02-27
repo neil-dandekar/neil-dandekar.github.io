@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Neil Dandekar</title>
+    <script>
+      (() => {
+        const params = new URLSearchParams(window.location.search);
+        const fallbackPath = params.get('p');
+        if (!fallbackPath) return;
+        const nextPath = decodeURIComponent(fallbackPath);
+        if (!nextPath.startsWith('/')) return;
+        window.history.replaceState(null, '', nextPath);
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
