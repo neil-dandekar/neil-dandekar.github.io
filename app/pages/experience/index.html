@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Neil Dandekar</title>
-        <meta name="description" content="Notebook entry by Neil Dandekar." />
+        <title>Experience - Neil Dandekar</title>
+        <meta name="description" content="Experience by Neil Dandekar." />
         <script>
             (() => {
                 try {
@@ -17,31 +17,13 @@
                 }
             })();
         </script>
-        <script>
-            (() => {
-                const slug = new URLSearchParams(window.location.search).get("slug");
-                if (!slug) return;
-                const roughTitle = slug
-                    .split("-")
-                    .filter(Boolean)
-                    .map((part) => part[0].toUpperCase() + part.slice(1))
-                    .join(" ");
-                if (roughTitle) {
-                    document.title = `${roughTitle} - Neil Dandekar`;
-                }
-            })();
-        </script>
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
-        />
         <script
             src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"
             defer
         ></script>
-        <link rel="stylesheet" href="/styles.css?v=20260227l" />
+        <link rel="stylesheet" href="/app/core/styles.css?v=20260227l" />
     </head>
-    <body data-page="entry">
+    <body data-page="experience">
         <div class="site-shell">
             <section class="topbar" aria-label="Current path and quick links">
                 <p class="fs-path topbar-path" id="topbarPath"></p>
@@ -138,25 +120,24 @@
 
             <aside class="site-sidebar" aria-label="Site navigation">
                 <p class="site-sidebar-label">Folders</p>
-                <a class="site-nav-link" data-node="home" href="/">home.md</a>
+                <a class="site-nav-link" data-node="home" href="/app/pages/index.html">home.md</a>
                 <a
                     class="site-nav-link"
                     data-node="experience"
-                    href="/experience/"
+                    href="/app/pages/experience/"
                 >
                     experience.md
                 </a>
-                <a class="site-nav-link" data-node="thoughts" href="/thoughts/">
+                <a class="site-nav-link" data-node="thoughts" href="/app/pages/thoughts/">
                     thoughts/
                 </a>
             </aside>
 
             <main class="page">
-                <article class="entry">
-                    <h1 class="entry-title" id="entryTitle">Loading...</h1>
-                    <p class="entry-meta" id="entryMeta"></p>
-                    <div class="entry-content" id="entryContent"></div>
-                </article>
+                <section class="home-block experience-block">
+                    <p class="section-label" id="experienceLabel">Experience</p>
+                    <ul class="experience-list" id="experienceList"></ul>
+                </section>
                 <footer class="site-footer" aria-label="Footer">
                     <p class="site-footer-credit" id="footerCredit">
                         Built by Neil Dandekar.
@@ -172,16 +153,8 @@
             </main>
         </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
-        <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js" defer></script>
-        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" defer></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
-            defer
-        ></script>
-        <script src="/theme.js" defer></script>
-        <script src="/layout.js" defer></script>
-        <script src="/content.js" defer></script>
-        <script src="/entry.js" defer></script>
+        <script src="/app/core/theme.js" defer></script>
+        <script src="/app/core/layout.js" defer></script>
+        <script src="/app/core/content.js" defer></script>
     </body>
 </html>

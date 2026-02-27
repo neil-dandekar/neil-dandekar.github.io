@@ -25,8 +25,8 @@ function getSlugFromRoute() {
     }
 
     const parts = window.location.pathname.split("/").filter(Boolean);
-    if (parts.length >= 2 && parts[0] === "thoughts") {
-        return decodeURIComponent(parts[1]);
+    if (parts.length >= 4 && parts[0] === "app" && parts[1] === "pages" && parts[2] === "thoughts") {
+        return decodeURIComponent(parts[3].replace(/\.html$/, ""));
     }
 
     return "";

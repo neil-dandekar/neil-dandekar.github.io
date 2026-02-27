@@ -47,7 +47,7 @@ function formatDate(value) {
 }
 
 function getEntryRoute(slug) {
-    return `/thoughts/${encodeURIComponent(slug)}/`;
+    return `/app/pages/thoughts/${encodeURIComponent(slug)}.html`;
 }
 
 function buildEntries(listNode, entries) {

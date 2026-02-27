@@ -39,7 +39,7 @@
             src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"
             defer
         ></script>
-        <link rel="stylesheet" href="/styles.css?v=20260227l" />
+        <link rel="stylesheet" href="/app/core/styles.css?v=20260227l" />
     </head>
     <body data-page="entry">
         <div class="site-shell">
@@ -138,15 +138,15 @@
 
             <aside class="site-sidebar" aria-label="Site navigation">
                 <p class="site-sidebar-label">Folders</p>
-                <a class="site-nav-link" data-node="home" href="/">home.md</a>
+                <a class="site-nav-link" data-node="home" href="/app/pages/index.html">home.md</a>
                 <a
                     class="site-nav-link"
                     data-node="experience"
-                    href="/experience/"
+                    href="/app/pages/experience/"
                 >
                     experience.md
                 </a>
-                <a class="site-nav-link" data-node="thoughts" href="/thoughts/">
+                <a class="site-nav-link" data-node="thoughts" href="/app/pages/thoughts/">
                     thoughts/
                 </a>
             </aside>
@@ -179,9 +179,9 @@
             src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
             defer
         ></script>
-        <script src="/theme.js" defer></script>
-        <script src="/layout.js" defer></script>
-        <script src="/content.js" defer></script>
-        <script src="/entry.js" defer></script>
+        <script src="/app/core/theme.js" defer></script>
+        <script src="/app/core/layout.js" defer></script>
+        <script src="/app/core/content.js" defer></script>
+        <script src="/app/legacy/entry.js" defer></script>
     </body>
 </html>

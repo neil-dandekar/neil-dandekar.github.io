@@ -115,14 +115,14 @@ function getCurrentEntrySlug() {
     if (fromQuery) return fromQuery;
 
     const parts = window.location.pathname.split("/").filter(Boolean);
-    if (parts.length >= 2 && parts[0] === "thoughts") {
-        return decodeURIComponent(parts[1]);
+    if (parts.length >= 4 && parts[0] === "app" && parts[1] === "pages" && parts[2] === "thoughts") {
+        return decodeURIComponent(parts[3].replace(/\.html$/, ""));
     }
     return "";
 }
 
 function getEntryRoute(slug) {
-    return `/thoughts/${encodeURIComponent(slug)}/`;
+    return `/app/pages/thoughts/${encodeURIComponent(slug)}.html`;
 }
 
 function appendFilesystemNodeContent(node, label, kind) {
@@ -216,7 +216,7 @@ function renderFilesystemPath(content, entries, pathNode) {
     if (page === "thoughts" || page === "entry") {
         segments.push({
             label: notebookDir,
-            href: "/thoughts/",
+            href: "/app/pages/thoughts/",
             current: page === "thoughts",
         });
     }
@@ -294,7 +294,7 @@ function renderFilesystemTree(content, entries, treeNode) {
     const experienceItem = document.createElement("li");
     experienceItem.className = "fs-tree-item";
     experienceItem.appendChild(
-        createFilesystemTreeLink("experience.md", "/experience/", {
+        createFilesystemTreeLink("experience.md", "/app/pages/experience/", {
             current: page === "experience",
             kind: "file",
         }),
@@ -303,7 +303,7 @@ function renderFilesystemTree(content, entries, treeNode) {
     const thoughtsItem = document.createElement("li");
     thoughtsItem.className = "fs-tree-item";
     thoughtsItem.appendChild(
-        createFilesystemTreeLink(`${notebookDir}/`, "/thoughts/", {
+        createFilesystemTreeLink(`${notebookDir}/`, "/app/pages/thoughts/", {
             current: page === "thoughts",
             kind: "dir",
         }),
@@ -323,7 +323,7 @@ function renderFilesystemTree(content, entries, treeNode) {
             item.className = "fs-tree-item";
             const slug = getText(entry?.slug);
             const label = getFilesystemEntryFile(entry);
-            const href = slug ? getEntryRoute(slug) : "/thoughts/";
+            const href = slug ? getEntryRoute(slug) : "/app/pages/thoughts/";
             const isCurrent = page === "entry" && slug === currentSlug;
             item.appendChild(
                 createFilesystemTreeLink(label, href, {
