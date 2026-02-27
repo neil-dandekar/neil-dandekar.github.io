@@ -6,18 +6,20 @@
         <title>Entry - Neil Dandekar</title>
         <script>
             (() => {
-                const target = new URL('/app/pages/entry.html', window.location.origin);
-                target.search = window.location.search;
-                target.hash = window.location.hash;
+                const params = new URLSearchParams(window.location.search);
+                const slug = params.get('slug');
+                const sanitizedSlug = slug ? slug.toLowerCase().replace(/[^a-z0-9-]/g, '') : '';
+                const pathname = sanitizedSlug ? `/thoughts/${sanitizedSlug}/` : '/thoughts/';
+                const target = new URL(pathname, window.location.origin);
                 window.location.replace(target.toString());
             })();
         </script>
         <noscript>
-            <meta http-equiv="refresh" content="0; url=/app/pages/entry.html" />
+            <meta http-equiv="refresh" content="0; url=/thoughts/" />
         </noscript>
-        <link rel="canonical" href="/app/pages/entry.html" />
+        <link rel="canonical" href="/thoughts/" />
     </head>
     <body>
-        <p>Redirecting to <a href="/app/pages/entry.html">/app/pages/entry.html</a>...</p>
+        <p>Redirecting to <a href="/thoughts/">/thoughts/</a>...</p>
     </body>
 </html>
